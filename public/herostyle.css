@@ -1,18 +1,22 @@
 body{
+    /* background: rgb(69,200,188);
+    background: linear-gradient(90deg, rgba(69,200,188,1) 0%, rgba(109,163,116,1) 99%); */
     background: rgb(69,200,188);
-    background: linear-gradient(90deg, rgba(69,200,188,1) 0%, rgba(109,163,116,1) 99%);
+    background: linear-gradient(90deg, rgba(69,200,188,1) 0%, rgba(54,62,55,1) 99%); 
 }
 .hero{
     background: rgb(69,200,188);
-    background: linear-gradient(90deg, rgba(69,200,188,1) 0%, rgba(54,62,55,1) 99%); display: flex;
+    background: linear-gradient(90deg, rgba(69,200,188,1) 0%, rgba(54,62,55,1) 99%); 
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     flex-grow: 2;
+    /* box-shadow:0px 0px 5px white ; */
 }
 .heroContent{
-    padding: 10px;
+    padding: 20px;
 }
 .heroImage{
     padding: 10px;
@@ -20,6 +24,19 @@ body{
 }
 .img{
     clip-path: circle();
+
+}
+
+@media Screen and (max-width:400px){
+    .img{
+        height: 50vw;
+    }
+}
+
+@media Screen and (min-width:500px){
+    .img{
+        height: 50vw;
+    }
 }
 
 .navigationBar{
@@ -33,7 +50,8 @@ body{
 
 .About{
     justify-content: center;
-    margin: 10vw;
+    margin: 90px;
+    margin-bottom: 130px;
 }
 
 .Skills{
@@ -42,7 +60,7 @@ body{
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-
+    margin-top: 90px;
 }
 
 .Card{
@@ -52,8 +70,11 @@ body{
     height: 10vw;
     padding: 10px;
     margin: 15px;
-    box-shadow: 7px 9px 5px rgb(18, 82, 12);
+    box-shadow: 0px 1px 5px rgb(239, 243, 238);
 
+}
+.Card:hover{
+    box-shadow: 4px 8px 8px rgb(125, 129, 125);
 }
 
 .imgCard{
@@ -66,6 +87,7 @@ body{
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
+    margin-top: 90px;
 }
 .projectCard{
     display: flex;
@@ -76,13 +98,18 @@ body{
     margin: 15px;
     border:0px solid rgb(255, 255, 255);
     border-radius: 10px;
-    box-shadow: 7px 9px 5px rgb(18, 82, 12);
+    box-shadow: 0px 1px 5px rgb(125, 129, 125);
+}
+
+.projectCard:hover{
+    box-shadow: 4px 8px 8px rgb(125, 129, 125);
 }
 
 .projectContent{
     padding: 10px;
 }
 
+/* //website view button */
 .button {
     border-radius: 8px;
     background: rgb(69,200,188);
@@ -92,12 +119,9 @@ body{
     border: none;
    color: white;
     text-align: center;
-    
     padding: 10px;
-   
     transition: all 0.5s;
     cursor: pointer;
-    
   }
   
   .button span {
@@ -129,4 +153,54 @@ body{
     color: white;
   }
 
+a{
+    text-decoration: none;
+    color: bisque;
+    font-size: larger;
+    font-weight: bolder;
+}
+a:focus{
+    color: black;
+    
+}
 
+.typing-demo1 {
+    width: 22ch;
+    animation: typing 4s steps(22);
+    white-space: nowrap;
+    overflow: hidden;
+    /* border-right: 3px solid; */
+    font-family: monospace;
+    font-size: 2em;
+  }
+  .typing-demo2 {
+    width: 22ch;
+    animation: typing 4s steps(22) ,blink .5s step-end infinite alternate;
+    animation-delay: 4s;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 2em;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
+
+  /*footer*/
+  .footer{
+    position: relative;
+    margin-top: 50px;
+    justify-content: center;
+    text-align: center;
+    bottom: 0px;
+  }

@@ -4,7 +4,8 @@ function About(){
     return(
         <div className="About">
         <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum nulla aut minus sit architecto, voluptatum non ab explicabo? Saepe, dolore repellendus ratione odio magni sit vero placeat nihil minima consectetur.
+           Hi Everyone, I'm Bikramjit Das Student of National Institute Of Technology, Silchar, currently pursuing Btech in Electronics and Communication Engineering.<br/>
+           I always love to work for the Society.
         </p>
     </div>
     );

@@ -4,10 +4,11 @@ import Hero from "./Hero";
 import About from "./About";
 import Skill from "./Skills";
 import Project from "./Projects";
+import Footer from "./Footer";
 
 import {
     BrowserRouter as Router,
-    Switch,
+    Routes,
     Route,
     Link
   } from "react-router-dom";
@@ -18,27 +19,24 @@ function App(){
             <Hero/>
             <Router>
             <div className="navigationBar">
-                <nav>
-        <div className="navClass1"><Link to="/about">About</Link></div>
-        <div className="navClass2"><Link to="/skill">Skills</Link></div>
-        <div className="navClass3"><Link to="/project">Projects</Link></div>
-        </nav>
+               
+            <Link to="/about"><div className="navClass1">About</div></Link>
+        <div className="navClass2"><Link to="/skill"  >Skills</Link></div>
+        <div className="navClass3"><Link to="/project"  >Projects</Link></div>
+   
         {/* <div className="navClass4"><Link to="/about">Contact</Link></div> */}
         </div>
             
-           <Switch>
-            <Route exact path="/about">
-                <About/>
-            </Route>
-            <Route exact path="/skill">
-                <Skill/>
-            </Route>
-            <Route exact path="/about">
-                <Project/>
-            </Route>
+           <Routes>
+           <Route exact path="/about" element={<About />} />
+            <Route exact path="/skill" element={<Skill />} />
+            <Route exact path="/project" element={<Project/>}/>
+           
 
-           </Switch>
+           </Routes>
+         
             </Router>
+            <Footer/>
         </div>
     );
 }

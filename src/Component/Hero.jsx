@@ -1,16 +1,16 @@
 import React from "react";
-
+import mypic from "../images/bik.jpg";
     function Hero() {
         return (
             <div className="hero">
                 <div></div>
                 <div className="heroContent">
-                    <p><h2>I'm Bikramjit</h2></p>
-                    <p>A MERN Developer</p>
+                    <p><h2 className="typing-demo1">I'm Bikramjit</h2></p>
+                    <p className="typing-demo2">A MERN Developer</p>
                 </div>
                 <div></div>
                 <div className="heroImage">
-                    <img className="img" src="../public/images/bik.jpg" alt="das" height="400vw" />
+                    <img className="img" src={mypic} alt="das"  />
                 </div>
                 <div></div>
             </div>
