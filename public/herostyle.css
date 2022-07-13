@@ -27,17 +27,18 @@ body{
 
 }
 
-@media Screen and (max-width:400px){
+/* @media Screen and (max-width:400px){
     .img{
         height: 50vw;
     }
+
 }
 
 @media Screen and (min-width:500px){
     .img{
         height: 50vw;
     }
-}
+} */
 
 .navigationBar{
     position: relative;
@@ -91,11 +92,14 @@ body{
 }
 .projectCard{
     display: flex;
+    
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 40vw;
+    /* overflow-wrap:normal; */
     margin: 15px;
+    padding: 10px;
     border:0px solid rgb(255, 255, 255);
     border-radius: 10px;
     box-shadow: 0px 1px 5px rgb(125, 129, 125);
@@ -199,8 +203,135 @@ a:focus{
   /*footer*/
   .footer{
     position: relative;
-    margin-top: 50px;
+    margin-top: 200px;
     justify-content: center;
     text-align: center;
-    bottom: 0px;
+    
   }
+
+  @media Screen and (max-width:768px){
+    .img{
+        height: 50vw;
+    }
+    .projectCard{
+      width: 90vw;
+    }
+}
+
+@media Screen and (min-width:768px){
+    .img{
+        height: 50vw;
+    }
+    .projectCard{
+      width: 40vw;
+    }
+}
+
+
+
+/*Contact form*/
+.Contact{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.follow{
+  display: flex;
+  flex-direction: column;
+ align-items: center;
+ justify-items: baseline;
+}
+.social{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-items: baseline;
+}
+.contact1{
+  justify-content: center;
+  justify-items: baseline;
+  vertical-align: middle;
+  text-align: center;
+}
+a{
+  text-decoration: none;
+}
+.socialIcon{
+  margin: 20px;
+}
+form{
+  border: 0px white solid;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 40px;
+}
+
+input, textarea{
+background: #ecf0f3;
+padding: 10px;
+padding-left: 20px;
+font-size: 14px;
+border-radius: 20px;
+box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+}
+
+.formButton{
+  border: 2px white solid;
+  border-radius: 10px;
+  box-shadow: inset 6px 6px 6px #cbced1, inset -6px -6px 6px white;
+}
+
+
+/*flip card*/
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  margin-bottom: 30px;
+}
+
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+ 
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  display: flex;
+  flex-direction: column;
+  background-color:transparent;
+  color: black;
+  justify-content: center;
+  justify-items: baseline;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.flip-card-back {
+  background-color:transparent;
+  color: white;
+  transform: rotateY(180deg);
+  justify-content: center;
+  align-items: center;
+  vertical-align: middle;
+}

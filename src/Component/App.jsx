@@ -4,6 +4,7 @@ import Hero from "./Hero";
 import About from "./About";
 import Skill from "./Skills";
 import Project from "./Projects";
+import Contact from "./Contact";
 import Footer from "./Footer";
 
 import {
@@ -23,7 +24,7 @@ function App(){
             <Link to="/about"><div className="navClass1">About</div></Link>
         <div className="navClass2"><Link to="/skill"  >Skills</Link></div>
         <div className="navClass3"><Link to="/project"  >Projects</Link></div>
-   
+        <div className="navClass4"><Link to="/contactMe"  >Contact Me</Link></div>
         {/* <div className="navClass4"><Link to="/about">Contact</Link></div> */}
         </div>
             
@@ -31,10 +32,8 @@ function App(){
            <Route exact path="/about" element={<About />} />
             <Route exact path="/skill" element={<Skill />} />
             <Route exact path="/project" element={<Project/>}/>
-           
-
+            <Route exact path="/contactMe" element={<Contact/>}/>
            </Routes>
-         
             </Router>
             <Footer/>
         </div>

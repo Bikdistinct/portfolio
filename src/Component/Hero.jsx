@@ -6,7 +6,7 @@ import mypic from "../images/bik.jpg";
                 <div></div>
                 <div className="heroContent">
                     <p><h2 className="typing-demo1">I'm Bikramjit</h2></p>
-                    <p className="typing-demo2">A MERN Developer</p>
+                    <p className="typing-demo2">MERN Stack Developer</p>
                 </div>
                 <div></div>
                 <div className="heroImage">
